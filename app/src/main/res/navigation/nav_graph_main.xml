@@ -11,7 +11,7 @@
             tools:layout="@layout/fragment_page1">
         <action
                 android:id="@+id/action_page2"
-                app:destination="@id/page2Fragment" />
+                app:destination="@id/page2Fragment"/>
     </fragment>
 
     <fragment
@@ -21,10 +21,11 @@
             tools:layout="@layout/fragment_page2">
         <action
                 android:id="@+id/action_page1"
-                app:popUpTo="@id/page1Fragment" />
+                app:popUpTo="@id/page1Fragment"/>
         <action
                 android:id="@+id/action_page3"
-                app:destination="@id/nav_graph_page3" />
+                app:destination="@id/nav_graph_page3"/>
+
     </fragment>
 
     <navigation
@@ -34,7 +35,12 @@
                 android:id="@+id/page3Fragment"
                 android:name="ute.com.learnnavigation.Page3Fragment"
                 android:label="fragment_page1"
-                tools:layout="@layout/fragment_page3" />
+                tools:layout="@layout/fragment_page3"/>
+        <!--使用safe args 傳參數-->
+        <argument
+                android:name="amount"
+                android:defaultValue="1"
+                app:argType="integer"/>
     </navigation>
 
 </navigation>
